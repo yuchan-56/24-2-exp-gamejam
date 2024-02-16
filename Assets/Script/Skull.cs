@@ -10,6 +10,8 @@ public class Skull : MonoBehaviour
 
     public void Change(int i)
     {
+        if (index[i]) AudioManager.Instance.SFXPlay("FireOFF");
+        else AudioManager.Instance.SFXPlay("FireOn");
         index[i] = !index[i];
     }
 
@@ -28,6 +30,6 @@ public class Skull : MonoBehaviour
         Debug.Log("Correct!");
         gameObject.SetActive(false);
         inventory.GetItem(0);
-        //열쇠 소리 추가
+        AudioManager.Instance.SFXPlay("KeyDrop");
     }
 }

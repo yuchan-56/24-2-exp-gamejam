@@ -677,7 +677,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -778,6 +778,14 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 3c836c8d1f2dede4ea729bda3b343808, type: 3}
   - {fileID: 8300000, guid: a8d1bd3a8e17ace47b8f01974c602170, type: 3}
   - {fileID: 8300000, guid: f626c7b9f5c1e8645bcdb140ded4163e, type: 3}
+  - {fileID: 8300000, guid: e109e99fc9e059048983dd4245064ef2, type: 3}
+  - {fileID: 8300000, guid: 6951279f9f7a85c4a9a1cfc26dee999c, type: 3}
+  - {fileID: 8300000, guid: e3756d1e0d040234cbecf586454b69f1, type: 3}
+  - {fileID: 8300000, guid: 4c408d545be3005469810b1783f57960, type: 3}
+  - {fileID: 8300000, guid: 7e6b13491cf278440be1186ecce65822, type: 3}
+  - {fileID: 8300000, guid: 567c77ecee630d24a99bcb801bc5adc6, type: 3}
+  - {fileID: 8300000, guid: 72aa6acf42bc62048a4607784d4f09bf, type: 3}
+  - {fileID: 8300000, guid: 8a35888f19e83694bb3d219be744d7a7, type: 3}
 --- !u!4 &533728736
 Transform:
   m_ObjectHideFlags: 0

@@ -8,4 +8,9 @@ public class ButtonSound : MonoBehaviour
     {
         AudioManager.Instance.SFXPlay("Button");
     }
+
+    public void PaperSound()
+    {
+        AudioManager.Instance.SFXPlay("Paper");
+    }
 }

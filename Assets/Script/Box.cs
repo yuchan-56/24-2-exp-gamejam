@@ -39,6 +39,7 @@ public class Box : MonoBehaviour
 
     private void Clear()
     {
+        AudioManager.Instance.SFXPlay("KeyOpen");
         isCorrect = true;
         boxImage[0].SetActive(false);
         boxImage[1].SetActive(true);

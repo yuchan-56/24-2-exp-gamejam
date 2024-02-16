@@ -12,10 +12,11 @@ public class Door : MonoBehaviour
         if(inventory.CheckItem(1))
         {
             SceneManager.LoadScene("Clear");
+            AudioManager.Instance.SFXPlay("KeyOpen");
         }
         else
         {
-
+            AudioManager.Instance.SFXPlay("KeyFail");
         }
     }
 

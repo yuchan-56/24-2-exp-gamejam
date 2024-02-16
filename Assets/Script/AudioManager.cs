@@ -20,9 +20,9 @@ public class AudioManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         soundClip.Add("Menu", clipList[0]);
-        soundClip.Add("Ingame", clipList[1]);
-        soundClip.Add("Clearend", clipList[2]);
-        soundClip.Add("Gameover", clipList[3]);
+        soundClip.Add("InGame", clipList[1]);
+        soundClip.Add("ClearEnd", clipList[2]);
+        soundClip.Add("GameOver", clipList[3]);
 
         soundClip.Add("Button", clipList[4]);
         soundClip.Add("KeyOpen", clipList[5]);
