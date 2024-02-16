@@ -11,26 +11,9 @@ public class Box : MonoBehaviour
     public GameObject boxCanvas;
     public GameObject[] boxImage = new GameObject[2];
     public GameObject nextroom, previousroom;
+    public GameObject ZoomBox;
 
     private bool isCorrect = false;
-    private bool locked;
-
-    public void Awake()
-    {
-        isCorrect = false;
-        locked = true;
-    }
-
-    public void BoxClick()
-    {
-        Debug.Log("Å¬¸¯");
-        if (locked)
-        {
-            boxCanvas.SetActive(true);
-            nextroom.SetActive(false);
-            previousroom.SetActive(false);
-        }
-    }
 
     public void Next(int i)
     {
@@ -56,15 +39,13 @@ public class Box : MonoBehaviour
 
     private void Clear()
     {
-        locked = false;
         isCorrect = true;
         boxImage[0].SetActive(false);
         boxImage[1].SetActive(true);
+        ZoomBox.SetActive(true);
 
         Debug.Log("Correct!");
 
         gameObject.SetActive(false);
-        nextroom.SetActive(true);
-        previousroom.SetActive(true);
     }
 }
