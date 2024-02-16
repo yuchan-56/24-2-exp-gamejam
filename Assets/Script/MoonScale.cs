@@ -4,26 +4,19 @@ using UnityEngine;
 
 public class MoonScale : MonoBehaviour
 {
-    public float growthRate;
+    public Timer timer;
+    private int time;
 
-    public void Awake()
+    public void OnEnable()
     {
-        growthRate = 0.02f;
+        time = timer.time;
         StartCoroutine(GrowCircle());
     }
     IEnumerator GrowCircle()
     {
-        // 무한 루프
         while (true)
         {
-            // 현재 스케일을 가져와서 크기 증가
-            Vector3 currentScale = transform.localScale;
-            currentScale += new Vector3(growthRate, growthRate, 0f);
-
-            // 증가된 크기를 적용
-            transform.localScale = currentScale;
-
-            // 0.1초 기다림
+            transform.localScale = new Vector3(Mathf.Lerp(1, 10, (60 - time) / 60), Mathf.Lerp(1, 10, (60 - time) / 60), 0f);
             yield return new WaitForSeconds(0.1f);
         }
     }
