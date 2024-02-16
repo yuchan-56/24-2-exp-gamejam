@@ -6043,7 +6043,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &994964701
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7762,7 +7762,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1371795476
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9386,7 +9386,6 @@ GameObject:
   - component: {fileID: 1573688031}
   - component: {fileID: 1573688033}
   - component: {fileID: 1573688032}
-  - component: {fileID: 1573688034}
   m_Layer: 5
   m_Name: Darkness
   m_TagString: Untagged
@@ -9451,20 +9450,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1573688030}
   m_CullTransparentMesh: 1
---- !u!114 &1573688034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1573688030}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 023abf921d002924d93456eb9cd28fbd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeDuration: 45
-  exponentialFactor: 2
 --- !u!1 &1579989131
 GameObject:
   m_ObjectHideFlags: 0
@@ -11983,7 +11968,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78f362a21b4a37e40bec34aaea7d6e13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  growthRate: 0.01
+  timer: {fileID: 2048478663}
 --- !u!114 &1895471443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12764,6 +12749,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2048478664}
   - component: {fileID: 2048478663}
+  - component: {fileID: 2048478665}
   m_Layer: 0
   m_Name: Timer
   m_TagString: Untagged
@@ -12800,6 +12786,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2048478665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2048478662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 023abf921d002924d93456eb9cd28fbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeDuration: 60
+  exponentialFactor: 3
+  darkness: {fileID: 1573688030}
+  myImage: {fileID: 1573688032}
 --- !u!1 &2070505708
 GameObject:
   m_ObjectHideFlags: 0
