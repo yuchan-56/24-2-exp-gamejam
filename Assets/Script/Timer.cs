@@ -29,6 +29,7 @@ public class Timer : MonoBehaviour
 
     IEnumerator Fail()
     {
+        background.gameObject.SetActive(true);
         float time = 0;
         while (time < 1)
         {
