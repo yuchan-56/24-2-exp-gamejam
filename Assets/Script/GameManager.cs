@@ -10,10 +10,12 @@ public class GameManager : MonoBehaviour
 {
     public int LeftTime;
     public TextMeshProUGUI TimerText;
+    public GameObject GameOverCanvas;
 
 
     public void Start()
     {
+        GameOverCanvas.SetActive(false);
         LeftTime = 60;
         StartCoroutine(StartTimer());
     }
@@ -32,6 +34,6 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-
+        GameOverCanvas.SetActive(true);
     }
 }
