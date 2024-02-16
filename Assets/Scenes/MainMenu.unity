@@ -191,7 +191,7 @@ Canvas:
   m_GameObject: {fileID: 33232846}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 1541417598}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -203,7 +203,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1000
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &33232850
 RectTransform:
@@ -1180,9 +1180,9 @@ Canvas:
   m_GameObject: {fileID: 908800864}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 1541417598}
-  m_PlaneDistance: 100
+  m_PlaneDistance: 0
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -2364,7 +2364,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1541417599}
-  - {fileID: 33232850}
   - {fileID: 908800868}
+  - {fileID: 33232850}
   - {fileID: 1982616110}
   - {fileID: 533728736}
