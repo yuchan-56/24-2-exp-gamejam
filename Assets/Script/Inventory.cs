@@ -30,25 +30,4 @@ public class Inventory : MonoBehaviour
         }
         return false;
     }
-
-    public void OpenDoor()
-    {
-        if(CheckItem(1))
-        {
-            Success();
-        }
-        else
-        {
-            Fail();
-        }
-    }
-    public void Success()
-    {
-
-    }
-
-    public void Fail()
-    {
-        
-    }
 }

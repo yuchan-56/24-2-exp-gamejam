@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public Inventory inventory;
     public TextMeshProUGUI TimerText;
     public GameObject GameOverCanvas;
+    public GameObject[] Rooms;
 
 
     public void Start()
@@ -36,5 +37,19 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         GameOverCanvas.SetActive(true);
+    }
+
+    public void OpenDoor()
+    {
+        if (inventory.CheckItem(1)) Success();  else Fail();
+    }
+    private void Success()
+    {
+
+    }
+
+    private void Fail()
+    {
+
     }
 }
