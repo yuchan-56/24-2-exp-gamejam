@@ -5,19 +5,11 @@ using UnityEngine;
 public class MoonScale : MonoBehaviour
 {
     public Timer timer;
-    private int time;
+    private float newScale;
 
-    public void OnEnable()
+    private void Update()
     {
-        time = timer.time;
-        StartCoroutine(GrowCircle());
-    }
-    IEnumerator GrowCircle()
-    {
-        while (true)
-        {
-            transform.localScale = new Vector3(Mathf.Lerp(1, 10, (60 - time) / 60), Mathf.Lerp(1, 10, (60 - time) / 60), 0f);
-            yield return new WaitForSeconds(0.1f);
-        }
+        newScale = Mathf.Lerp(1, 10, timer.time / 60f);
+        transform.localScale = new Vector3(newScale, newScale, 0f);
     }
 }

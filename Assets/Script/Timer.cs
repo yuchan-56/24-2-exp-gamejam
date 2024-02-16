@@ -8,21 +8,20 @@ using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
-    public int time;
+    public float time = 0;
     public Image background;
     
     public void Start()
     {
-        time = 60;
         StartCoroutine(StartTimer());
     }
 
     IEnumerator StartTimer()
     {
-        while (time > 0)
+        while (time < 60)
         {
-            time--;
-            yield return new WaitForSeconds(1f);
+            time += Time.deltaTime;
+            yield return null;
         }
         StartCoroutine(Fail());
     }
