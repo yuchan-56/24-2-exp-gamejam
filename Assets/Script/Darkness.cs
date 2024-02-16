@@ -1,38 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Darkness : MonoBehaviour
 {
-    public float fadeDuration = 45f;
-    public float exponentialFactor = 3f;
-
-    public GameObject darkness;
-    public Image myImage;
-    private Color startColor;
+    public Image background;
+    public Button skull;
 
     void Start()
     {
-        startColor = myImage.color;
-        StartCoroutine(FadeOut());
+        StartCoroutine(FadeIn());
     }
 
-    IEnumerator FadeOut()
+    IEnumerator FadeIn()
     {
-        float elapsedTime = 0f;
-
-        while (elapsedTime < fadeDuration)
+        while (Timer.Instance.time < 60f)
         {
-            float alpha = Mathf.Pow(elapsedTime / fadeDuration, exponentialFactor);
-            
-            Color newColor = startColor;
-            newColor.a = 1 - alpha;
-            myImage.color = newColor;
+            background.color = new Color(0, 0, 0, 
+                Mathf.Lerp(1, 0, Timer.Instance.time / 60f));
 
-            elapsedTime += Time.deltaTime;
+            if (Timer.Instance.time > 15f)
+            {
+                skull.interactable = true;
+            }
+
             yield return null;
         }
-        darkness.SetActive(false);
+        
     }
 }
