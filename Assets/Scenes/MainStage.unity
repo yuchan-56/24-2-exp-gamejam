@@ -7896,6 +7896,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1371795476}
+  - component: {fileID: 1371795477}
   m_Layer: 5
   m_Name: Room3
   m_TagString: Untagged
@@ -7926,6 +7927,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1371795477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371795475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 023abf921d002924d93456eb9cd28fbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  background: {fileID: 1573688032}
+  skull: {fileID: 1684741660}
 --- !u!1 &1373701655
 GameObject:
   m_ObjectHideFlags: 0
@@ -10780,7 +10795,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1684741661}
   m_OnClick:
     m_PersistentCalls:
@@ -12131,7 +12146,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78f362a21b4a37e40bec34aaea7d6e13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: {fileID: 2048478663}
 --- !u!114 &1895471443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12912,7 +12926,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2048478664}
   - component: {fileID: 2048478663}
-  - component: {fileID: 2048478665}
   m_Layer: 0
   m_Name: Timer
   m_TagString: Untagged
@@ -12949,22 +12962,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2048478665
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2048478662}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 023abf921d002924d93456eb9cd28fbd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeDuration: 60
-  exponentialFactor: 3
-  darkness: {fileID: 1573688030}
-  myImage: {fileID: 1573688032}
 --- !u!1 &2070505708
 GameObject:
   m_ObjectHideFlags: 0

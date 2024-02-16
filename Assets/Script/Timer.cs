@@ -5,12 +5,17 @@ using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public class Timer : MonoBehaviour
 {
+    public static Timer Instance { get; private set; }
+    private void Awake() => Instance = this;
+
     public float time = 0;
     public Image background;
-    
+
+
     public void Start()
     {
         StartCoroutine(StartTimer());
