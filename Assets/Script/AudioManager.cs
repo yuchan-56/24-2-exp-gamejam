@@ -37,20 +37,23 @@ public class AudioManager : MonoBehaviour
     public AudioSource audioSource;
     public AudioSource SFXSource;
     public List<AudioClip> clipList;
-    public Dictionary<string, AudioClip> soundClip;
+    public Dictionary<string, AudioClip> soundClip = new Dictionary<string, AudioClip>();
 
     public void AudioPlay(string audioName)
     {
+        audioSource.clip = soundClip[audioName];
         audioSource.PlayOneShot(soundClip[audioName]);
     }
 
     public void SFXPlay(string SFXName)
     {
+        SFXSource.clip = soundClip[SFXName];
         SFXSource.PlayOneShot(soundClip[SFXName]);
     }
 
     public void ChangeVolume(float value)
     {
-        audioSource.volume = value;
+        audioSource.volume = value * 0.5f;
+        SFXSource.volume = value;
     }
 }

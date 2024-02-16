@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public void Awake()
+    public void Start()
     {
         AudioManager.Instance.AudioPlay("Menu");
     }
