@@ -8,21 +8,12 @@ public class ItemZoom : MonoBehaviour
 {
     public GameObject ZoomCanvas;
     public Image ItemImage;
-    public TextMeshProUGUI ItemInfo;
+    public Image ItemInfo;
 
-    public void Awake()
-    {
-        ZoomCanvas.SetActive(false);
-    }
-    public void SetUp(Item item)
+    public void Zoom(Item item)
     {
         ZoomCanvas.SetActive(true);
-        ItemImage.sprite = item.ItemImage;
-        ItemInfo.text = item.ItemDescription;
-    }
-
-    public  void CloseCanvas()
-    {
-        ZoomCanvas.SetActive(false);
+        ItemImage.sprite = item.Image;
+        ItemInfo.sprite = item.Info;
     }
 }
