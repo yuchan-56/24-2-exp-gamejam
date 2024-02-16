@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
-    private int time;
+    public int time;
     public Image background;
     
     public void Start()

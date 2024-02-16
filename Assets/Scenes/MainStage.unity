@@ -9386,6 +9386,7 @@ GameObject:
   - component: {fileID: 1573688031}
   - component: {fileID: 1573688033}
   - component: {fileID: 1573688032}
+  - component: {fileID: 1573688034}
   m_Layer: 5
   m_Name: Darkness
   m_TagString: Untagged
@@ -9450,6 +9451,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1573688030}
   m_CullTransparentMesh: 1
+--- !u!114 &1573688034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573688030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 023abf921d002924d93456eb9cd28fbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeDuration: 45
+  exponentialFactor: 2
 --- !u!1 &1579989131
 GameObject:
   m_ObjectHideFlags: 0
@@ -12768,6 +12783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4308156d1a70b46459e2fbf2b0711b3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  time: 0
   background: {fileID: 541962864}
 --- !u!4 &2048478664
 Transform:

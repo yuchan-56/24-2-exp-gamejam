@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Darkness : MonoBehaviour
 {
-    public float fadeDuration = 60f;
+    public float fadeDuration = 45f;
     public float exponentialFactor = 3f;
 
     private Image myImage;
