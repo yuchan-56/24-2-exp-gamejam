@@ -6,27 +6,29 @@ using UnityEngine;
 public class Box : MonoBehaviour
 {
     private int[] index = new int[3];
+
     public GameObject[] image = new GameObject[3];
     public GameObject boxCanvas;
     public GameObject[] boxImage = new GameObject[2];
     public GameObject nextroom, previousroom;
+
     private bool isCorrect = false;
-    private bool locked, closed;
+    private bool locked;
 
     public void Awake()
     {
+        isCorrect = false;
         locked = true;
-        closed = true;
     }
 
     public void BoxClick()
     {
-        if(locked) boxCanvas.SetActive(true);
-        else if (closed)
+        Debug.Log("Å¬¸¯");
+        if (locked)
         {
-            closed = false;
-            boxImage[0].SetActive(false);
-            boxImage[1].SetActive(true);
+            boxCanvas.SetActive(true);
+            nextroom.SetActive(false);
+            previousroom.SetActive(false);
         }
     }
 
@@ -56,8 +58,11 @@ public class Box : MonoBehaviour
     {
         locked = false;
         isCorrect = true;
+        boxImage[0].SetActive(false);
+        boxImage[1].SetActive(true);
 
         Debug.Log("Correct!");
+
         gameObject.SetActive(false);
         nextroom.SetActive(true);
         previousroom.SetActive(true);
