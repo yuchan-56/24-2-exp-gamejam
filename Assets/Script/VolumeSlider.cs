@@ -13,7 +13,7 @@ public class VolumeSlider : MonoBehaviour
 
     void ChangeVolume(float value)
     {
-        AudioManager.Instance.ChangeVolume(value);
+        AudioManager.Instance.ChangeVolume(value);  
     }
 
     void OnDisable()
