@@ -12,10 +12,16 @@ public class AudioManager : MonoBehaviour
     {
         Instance = this;
         DontDestroyOnLoad(gameObject);
+
+        soundClip.Add("Menu", clipList[0]);
+        soundClip.Add("Ingame", clipList[1]);
+        soundClip.Add("Clearend", clipList[2]);
+        soundClip.Add("Gameover", clipList[3]);
     }
 
 
     public AudioSource audioSource;
+    public List<AudioClip> clipList;
     public Dictionary<string, AudioClip> soundClip;
 
     public void AudioPlay(string audioName)
