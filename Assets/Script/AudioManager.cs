@@ -36,7 +36,6 @@ public class AudioManager : MonoBehaviour
         soundClip.Add("FireOn", clipList[8]);
         soundClip.Add("FireOff", clipList[9]);
         soundClip.Add("KeyDrop", clipList[10]);
-        soundClip.Add("EndScream", clipList[11]);
     }
 
 

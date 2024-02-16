@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
+    public void Start()
+    {
+        AudioManager.Instance.AudioPlay("GameOver");
+    }
     public void Retry()
     {
         SceneManager.LoadScene("MainMenu");
