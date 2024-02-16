@@ -13,7 +13,7 @@ public class Timer : MonoBehaviour
     
     public void Start()
     {
-        time = 5;
+        time = 60;
         StartCoroutine(StartTimer());
     }
 
