@@ -9,6 +9,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public int LeftTime;
+    public Inventory inventory;
     public TextMeshProUGUI TimerText;
     public GameObject GameOverCanvas;
 

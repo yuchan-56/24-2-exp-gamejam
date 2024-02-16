@@ -1,5 +1,6 @@
-using System.Collections;
+    using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 
 public class Inventory : MonoBehaviour
@@ -21,4 +22,33 @@ public class Inventory : MonoBehaviour
         zoomParent.transform.GetChild(inventory[item]).gameObject.SetActive(true);
     }
     
+    public bool CheckItem(int item)
+    {
+        if(inventory.Contains(item))
+        {
+            return true;
+        }
+        return false;
+    }
+
+    public void OpenDoor()
+    {
+        if(CheckItem(1))
+        {
+            Success();
+        }
+        else
+        {
+            Fail();
+        }
+    }
+    public void Success()
+    {
+
+    }
+
+    public void Fail()
+    {
+        
+    }
 }
