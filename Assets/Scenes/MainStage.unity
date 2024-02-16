@@ -418,7 +418,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 100
   m_TargetDisplay: 0
 --- !u!224 &55330266
 RectTransform:
@@ -834,7 +834,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 212455752}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1699244959}
+        m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+        m_MethodName: ZoomItem
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &212455752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1645,7 +1657,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 321041913}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1699244959}
+        m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+        m_MethodName: ZoomItem
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &321041913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2952,7 +2976,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 714825688}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1699244959}
+        m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+        m_MethodName: ZoomItem
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &714825688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3486,7 +3522,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 773318370}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1699244959}
+        m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+        m_MethodName: ZoomItem
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &773318370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8330,7 +8378,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 716ec8392d083be49b74b0d5f8e0f9b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parent: {fileID: 1505499039}
+  inventoryParent: {fileID: 1505499039}
+  zoomParent: {fileID: 55330262}
   prefab:
   - {fileID: 8486556142781425538, guid: e7dd9f1b152872e4991de172c5ffd5d3, type: 3}
   - {fileID: 8707101114363094937, guid: d3bff7befd615ae4db008967210f3b2c, type: 3}
