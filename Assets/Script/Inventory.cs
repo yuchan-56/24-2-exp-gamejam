@@ -8,7 +8,7 @@ public class Inventory : MonoBehaviour
 
     public GameObject inventoryParent, zoomParent;
     public GameObject[] prefab = new GameObject[4];
-    public List<int> inventory = new List<int>();
+    public List<int> inventory = new List<int>(); //{Key: 1, Note: 2, TornNote: 3, TormNote: 4}
 
     public void GetItem(int item)
     {

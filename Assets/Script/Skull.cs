@@ -27,7 +27,7 @@ public class Skull : MonoBehaviour
         isCorrect = true;
         Debug.Log("Correct!");
         gameObject.SetActive(false);
-        inventory.GetItem(1);
+        inventory.GetItem(0);
         //열쇠 소리 추가
     }
 }
