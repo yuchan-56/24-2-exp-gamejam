@@ -649,7 +649,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 533728734}
-  SFXSource: {fileID: 0}
+  SFXSource: {fileID: 533728737}
   clipList:
   - {fileID: 8300000, guid: 1614964bc0dbea94a93b9f065570923f, type: 3}
   - {fileID: 8300000, guid: 3c836c8d1f2dede4ea729bda3b343808, type: 3}
