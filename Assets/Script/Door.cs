@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Door : MonoBehaviour
 {
     public Inventory inventory;
+    public GameObject locked;
 
     public void ClickDoor()
     {
@@ -16,6 +18,7 @@ public class Door : MonoBehaviour
         }
         else
         {
+            locked.SetActive(true);
             AudioManager.Instance.SFXPlay("KeyFail");
         }
     }
