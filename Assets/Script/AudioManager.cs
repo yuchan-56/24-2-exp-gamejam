@@ -14,7 +14,6 @@ public class AudioManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-
     public AudioSource audioSource;
     public Dictionary<string, AudioClip> soundClip;
 
@@ -27,5 +26,4 @@ public class AudioManager : MonoBehaviour
     {
         audioSource.volume = value;
     }
-
 }

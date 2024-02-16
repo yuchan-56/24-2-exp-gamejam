@@ -6,6 +6,7 @@ public class Skull : MonoBehaviour
 {
     public bool[] index = new bool[4];
     private bool isCorrect = false;
+    public Inventory inventory;
 
     public void Change(int i)
     {
@@ -26,5 +27,7 @@ public class Skull : MonoBehaviour
         isCorrect = true;
         Debug.Log("Correct!");
         gameObject.SetActive(false);
+        inventory.GetItem(1);
+        //열쇠 소리 추가
     }
 }
