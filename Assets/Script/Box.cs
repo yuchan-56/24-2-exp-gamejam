@@ -33,6 +33,7 @@ public class Box : MonoBehaviour
 
     private void Clear()
     {
+        isCorrect = true;
         Debug.Log("Correct!");
         gameObject.SetActive(false);
     }
