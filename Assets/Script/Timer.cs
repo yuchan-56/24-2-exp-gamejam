@@ -1,25 +1,41 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
-    public int LeftTime;
+    private int time;
+    public Image background;
+    
     public void Start()
     {
-        LeftTime = 60;
+        time = 5;
         StartCoroutine(StartTimer());
     }
 
     IEnumerator StartTimer()
     {
-        while (LeftTime > 0)
+        while (time > 0)
         {
-            LeftTime--;
+            time--;
             yield return new WaitForSeconds(1f);
         }
-        //GameOver();
-        yield break;
+        StartCoroutine(Fail());
+    }
+
+    IEnumerator Fail()
+    {
+        float time = 0;
+        while (time < 1)
+        {
+            background.color = new Color(1, 1, 1, Mathf.Lerp(0, 1, time));
+            time += Time.deltaTime;
+            yield return null;
+        }
+        SceneManager.LoadScene("GameOver");
     }
 }
