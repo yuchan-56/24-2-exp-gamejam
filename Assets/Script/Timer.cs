@@ -6,7 +6,6 @@ using UnityEngine;
 public class Timer : MonoBehaviour
 {
     public int LeftTime;
-    public TextMeshProUGUI TimerText;
     public void Start()
     {
         LeftTime = 60;
@@ -18,7 +17,6 @@ public class Timer : MonoBehaviour
         while (LeftTime > 0)
         {
             LeftTime--;
-            TimerText.text = "LeftTime: " + LeftTime;
             yield return new WaitForSeconds(1f);
         }
         //GameOver();
