@@ -10,7 +10,7 @@ public class Skull : MonoBehaviour
 
     public void Change(int i)
     {
-        if (index[i]) AudioManager.Instance.SFXPlay("FireOFF");
+        if (index[i]) AudioManager.Instance.SFXPlay("FireOff");
         else AudioManager.Instance.SFXPlay("FireOn");
         index[i] = !index[i];
     }
