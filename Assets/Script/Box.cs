@@ -8,10 +8,7 @@ public class Box : MonoBehaviour
     private int[] index = new int[3];
 
     public GameObject[] image = new GameObject[3];
-    public GameObject boxCanvas;
-    public GameObject[] boxImage = new GameObject[2];
-    public GameObject nextroom, previousroom;
-    public GameObject ZoomBox;
+    public GameObject close, open;
 
     private bool isCorrect = false;
 
@@ -41,12 +38,9 @@ public class Box : MonoBehaviour
     {
         AudioManager.Instance.SFXPlay("KeyOpen");
         isCorrect = true;
-        boxImage[0].SetActive(false);
-        boxImage[1].SetActive(true);
-        ZoomBox.SetActive(true);
+        close.SetActive(false);
+        open.SetActive(true);
 
         Debug.Log("Correct!");
-
-        gameObject.SetActive(false);
     }
 }

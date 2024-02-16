@@ -8,6 +8,11 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance { get; private set; }
 
+    public AudioSource audioSource;
+    public AudioSource SFXSource;
+    public List<AudioClip> clipList;
+    public Dictionary<string, AudioClip> soundClip = new Dictionary<string, AudioClip>();
+
     public void Awake()
     {
         if (Instance != null)
@@ -34,11 +39,15 @@ public class AudioManager : MonoBehaviour
         soundClip.Add("EndScream", clipList[11]);
     }
 
+<<<<<<< Updated upstream
     public AudioSource audioSource;
     public AudioSource SFXSource;
     public List<AudioClip> clipList;
     public Dictionary<string, AudioClip> soundClip = new Dictionary<string, AudioClip>();
 
+=======
+    
+>>>>>>> Stashed changes
     public void AudioPlay(string audioName)
     {
         audioSource.clip = soundClip[audioName];
