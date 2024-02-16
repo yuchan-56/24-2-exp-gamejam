@@ -1,20 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
+using TMPro;
 using UnityEditor.UIElements;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public int currentdirection;
-    public GameObject[] direction = new GameObject[4];
+    public int LeftTime;
+    public TextMeshProUGUI TimerText;
 
-    public void Move(int targetdirection)
+
+    public void Start()
     {
-        for(int i = 0; i < direction.Length; i++)
+        LeftTime = 60;
+        StartCoroutine(StartTimer());
+    }
+
+    IEnumerator StartTimer()
+    {
+        while (LeftTime >0)
         {
-            direction[i].SetActive(false);
+            LeftTime--;
+            TimerText.text = "LeftTime: " + LeftTime;
+            yield return new WaitForSeconds(1f);
         }
-        direction[targetdirection].SetActive(true);
+        GameOver();
+        yield break;
+    }
+
+    public void GameOver()
+    {
+
     }
 }
