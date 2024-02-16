@@ -2,26 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class AudioManager : MonoBehaviour
 {
-    static private AudioManager instance;
-
-    static public AudioManager Instance
-    {
-        get
-        {
-            if (instance == null)
-            {
-                instance = new AudioManager();
-            }
-
-            return instance;
-        }
-    }
+    public static AudioManager Instance { get; private set; }
 
     public void Awake()
     {
+        Instance = this;
         DontDestroyOnLoad(gameObject);
     }
 
@@ -32,6 +21,11 @@ public class AudioManager : MonoBehaviour
     public void AudioPlay(string audioName)
     {
         audioSource.PlayOneShot(soundClip[audioName]);
+    }
+
+    public void ChangeVolume(float value)
+    {
+        audioSource.volume = value;
     }
 
 }
