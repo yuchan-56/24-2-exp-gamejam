@@ -8,7 +8,7 @@ public class MoonScale : MonoBehaviour
 
     private void Update()
     {
-        newScale = Mathf.Lerp(0.2f, 1, Timer.Instance.time / 60f);
+        newScale = Mathf.Lerp(0.2f, 2.4f, Timer.Instance.time / 60f);
         transform.localScale = new Vector3(newScale, newScale, 0f);
     }
 }
