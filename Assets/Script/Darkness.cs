@@ -20,7 +20,7 @@ public class Darkness : MonoBehaviour
         background.color = new Color(0, 0, 0,
                 Mathf.Lerp(1, 0, Timer.Instance.time / 60f));
 
-        if (Timer.Instance.time > 45f)
+        if (Timer.Instance.time > 5f)
         {
             startskull.interactable = true;
         }
