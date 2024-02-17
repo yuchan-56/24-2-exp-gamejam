@@ -31,6 +31,7 @@ public class Skull : MonoBehaviour
         Debug.Log("Correct!");
         gameObject.SetActive(false);
         inventory.GetItem(0);
+        inventory.ZoomFirstItem(0);
         AudioManager.Instance.SFXPlay("KeyDrop");
     }
 }

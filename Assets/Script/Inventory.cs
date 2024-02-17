@@ -8,7 +8,7 @@ public class Inventory : MonoBehaviour
 
     public GameObject inventoryParent, zoomParent;
     public GameObject[] prefab = new GameObject[4];
-    public List<int> inventory = new List<int>(); //{Key: 1, Note: 2, TornNote: 3, TormNote: 4}
+    public List<int> inventory = new List<int>();
 
     public void GetItem(int item)
     {
@@ -16,7 +16,12 @@ public class Inventory : MonoBehaviour
         inventory.Add(item);
     }
 
-    public void ZoomItem(int item)
+    public void ZoomFirstItem(int item)
+    {
+        zoomParent.transform.GetChild(item).gameObject.SetActive(true);
+    }
+
+    public void ZoomEquipItem(int item)
     {
         if (item >= inventory.Count) return;
         zoomParent.transform.GetChild(inventory[item]).gameObject.SetActive(true);
