@@ -11,7 +11,7 @@ public class Door : MonoBehaviour
 
     public void ClickDoor()
     {
-        if(inventory.CheckItem(1))
+        if(inventory.CheckItem(0))
         {
             AudioManager.Instance.SFXPlay("KeyOpen");
             AudioManager.Instance.AudioPlay("Clear");
