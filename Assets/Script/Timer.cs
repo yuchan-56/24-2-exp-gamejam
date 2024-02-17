@@ -15,13 +15,22 @@ public class Timer : MonoBehaviour
     public float time = 0;
     public Image background;
 
-
     public void Start()
     {
-        StartCoroutine(StartTimer());
+        StartCoroutine(StartTimer(time));
     }
 
-    IEnumerator StartTimer()
+    public void Resume()
+    {
+        StartCoroutine(StartTimer(time));
+    }
+
+    public void Pause()
+    {
+        StopAllCoroutines();
+    }
+
+    IEnumerator StartTimer(float starttime)
     {
         while (time < 60)
         {
@@ -30,6 +39,8 @@ public class Timer : MonoBehaviour
         }
         StartCoroutine(Fail());
     }
+
+
 
     IEnumerator Fail()
     {

@@ -8,7 +8,12 @@ using UnityEngine.UI;
 public class Darkness : MonoBehaviour
 {
     public Image background;
-    public Button[] skull = new Button[8];
+    public Button startskull;
+
+    public void buttonActive()
+    {
+        startskull.interactable = true;
+    }
 
     private void Update()
     {
@@ -17,10 +22,7 @@ public class Darkness : MonoBehaviour
 
         if (Timer.Instance.time > 45f)
         {
-            foreach (Button button in skull)
-            {
-                button.interactable = true;
-            }
+            startskull.interactable = true;
         }
     }
 
