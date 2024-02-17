@@ -5,13 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public void Start()
-    {
-        AudioManager.Instance.AudioPlay("Menu");
-    }
-
     public void StartGame()
     {
+        AudioManager.Instance.AudioPlay("InGame");
         SceneManager.LoadScene("MainStage");
     }
 

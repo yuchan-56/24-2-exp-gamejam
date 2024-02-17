@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -36,12 +37,13 @@ public class AudioManager : MonoBehaviour
         soundClip.Add("FireOn", clipList[8]);
         soundClip.Add("FireOff", clipList[9]);
         soundClip.Add("KeyDrop", clipList[10]);
+
+        AudioPlay("Menu");
     }
-
-
     public void AudioPlay(string audioName)
     {
-        audioSource.PlayOneShot(soundClip[audioName]);
+        audioSource.clip = soundClip[audioName];
+        audioSource.Play();
     }
 
     public void SFXPlay(string SFXName)

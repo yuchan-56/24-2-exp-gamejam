@@ -22,11 +22,13 @@ public class Timer : MonoBehaviour
 
     public void Resume()
     {
+        AudioManager.Instance.AudioPlay("InGame");
         StartCoroutine(StartTimer(time));
     }
 
     public void Pause()
     {
+        AudioManager.Instance.AudioPlay("Menu");
         StopAllCoroutines();
     }
 
