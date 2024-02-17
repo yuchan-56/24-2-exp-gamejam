@@ -19,7 +19,7 @@ public class Skull : MonoBehaviour
     private void Update()
     {
         if (!isCorrect && index[0] == false && index[1] == true
-            && index[2] == true && index[3] == false)
+            && index[2] == false && index[3] == true)
         {
             Clear();
         }
