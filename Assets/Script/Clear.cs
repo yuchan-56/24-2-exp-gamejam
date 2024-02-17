@@ -24,12 +24,14 @@ public class Clear : MonoBehaviour
 
         time = 0;
         float rotZ;
-        while (time < 1.5f)
+        while (time < 0.75f)
         {
-            rotZ = Mathf.Lerp(0f, 180f, time / 1.5f);
+            rotZ = Mathf.Lerp(0f, 180f, time / 0.75f);
             gameObject.transform.rotation = Quaternion.Euler(0, 0, rotZ);
             time += Time.deltaTime;
             yield return null;
         }
+        yield return new WaitForSeconds(1f);
+        Application.Quit();
     }
 }
