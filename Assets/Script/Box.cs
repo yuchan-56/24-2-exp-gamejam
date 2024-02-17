@@ -40,7 +40,5 @@ public class Box : MonoBehaviour
         isCorrect = true;
         close.SetActive(false);
         open.SetActive(true);
-
-        Debug.Log("Correct!");
     }
 }

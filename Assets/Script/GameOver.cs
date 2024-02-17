@@ -11,6 +11,7 @@ public class GameOver : MonoBehaviour
     }
     public void Retry()
     {
+        AudioManager.Instance.SFXPlay("Button");
         SceneManager.LoadScene("MainMenu");
     }
 }

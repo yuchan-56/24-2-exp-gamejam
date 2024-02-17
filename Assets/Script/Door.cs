@@ -14,7 +14,7 @@ public class Door : MonoBehaviour
         if(inventory.CheckItem(0))
         {
             AudioManager.Instance.SFXPlay("KeyOpen");
-            AudioManager.Instance.AudioPlay("Clear");
+            AudioManager.Instance.AudioPlay("ClearEnd");
             SceneManager.LoadScene("Clear");
         }
         else

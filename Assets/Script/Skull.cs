@@ -28,7 +28,6 @@ public class Skull : MonoBehaviour
     private void Clear()
     {
         isCorrect = true;
-        Debug.Log("Correct!");
         gameObject.SetActive(false);
         inventory.GetItem(0);
         inventory.ZoomFirstItem(0);
