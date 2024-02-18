@@ -17,13 +17,13 @@ public class Timer : MonoBehaviour
 
     public void Start()
     {
-        StartCoroutine(StartTimer(time));
+        StartCoroutine(StartTimer());
     }
 
     public void Resume()
     {
         AudioManager.Instance.AudioPlay("InGame");
-        StartCoroutine(StartTimer(time));
+        StartCoroutine(StartTimer());
     }
 
     public void Pause()
@@ -32,7 +32,7 @@ public class Timer : MonoBehaviour
         StopAllCoroutines();
     }
 
-    IEnumerator StartTimer(float starttime)
+    IEnumerator StartTimer()
     {
         while (time < 60)
         {

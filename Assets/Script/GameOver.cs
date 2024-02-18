@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
-    public void Start()
+    private void Awake()
     {
         AudioManager.Instance.AudioPlay("GameOver");
     }

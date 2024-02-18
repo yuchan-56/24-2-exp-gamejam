@@ -7,6 +7,7 @@ public class Clear : MonoBehaviour
 {
     public void Awake()
     {
+        AudioManager.Instance.AudioPlay("ClearEnd");
         StartCoroutine(MoveMoon());
     }
 
