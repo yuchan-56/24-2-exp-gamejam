@@ -54,6 +54,7 @@ public class Timer : MonoBehaviour
             time += Time.deltaTime;
             yield return null;
         }
+        yield return new WaitForSeconds(1f);
         SceneManager.LoadScene("GameOver");
     }
 }
