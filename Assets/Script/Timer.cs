@@ -17,6 +17,7 @@ public class Timer : MonoBehaviour
 
     public void Start()
     {
+        AudioManager.Instance.AudioPlay("InGame");
         StartCoroutine(StartTimer());
     }
 
