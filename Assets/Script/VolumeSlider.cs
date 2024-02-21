@@ -8,6 +8,7 @@ public class VolumeSlider : MonoBehaviour
     public Slider slider;
     void OnEnable()
     {
+        slider.value = AudioManager.Instance.SFXSource.volume;
         slider.onValueChanged.AddListener(delegate { ChangeVolume(slider.value); });
     }
 
