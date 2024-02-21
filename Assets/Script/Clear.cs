@@ -32,7 +32,10 @@ public class Clear : MonoBehaviour
             time += Time.deltaTime;
             yield return null;
         }
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(4f);
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
         Application.Quit();
     }
 }
