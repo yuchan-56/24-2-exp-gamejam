@@ -10,6 +10,9 @@ public class Darkness : MonoBehaviour
     public Image background;
     public Button startskull;
 
+    public GameObject brightText;
+    private bool isBright = false;
+
     public void buttonActive()
     {
         startskull.interactable = true;
@@ -21,6 +24,8 @@ public class Darkness : MonoBehaviour
         {
             background.color = new Color(0, 0, 0,
                 Mathf.Lerp(1, 0, Timer.Instance.time - 44));
+
+            if (!isBright) StartCoroutine(BrightText());
         }
 
         if (Timer.Instance.time > 45f)
@@ -28,6 +33,15 @@ public class Darkness : MonoBehaviour
             background.color = new Color(0, 0, 0, 0);
             startskull.interactable = true;
         }
+    }
+
+    IEnumerator BrightText()
+    {
+        isBright = true;
+        brightText.SetActive(true);
+
+        while (Timer.Instance.time < 46f) yield return null;
+        brightText.SetActive(false);
     }
 
 }
