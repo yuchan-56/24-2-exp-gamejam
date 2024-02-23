@@ -8533,7 +8533,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   background: {fileID: 1573688032}
   startskull: {fileID: 417573232}
-  brightText: {fileID: 1343901337}
 --- !u!1 &1378301287
 GameObject:
   m_ObjectHideFlags: 0
@@ -12196,6 +12195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   time: 0
   background: {fileID: 541962864}
+  brightText: {fileID: 1343901337}
 --- !u!4 &2048478664
 Transform:
   m_ObjectHideFlags: 0

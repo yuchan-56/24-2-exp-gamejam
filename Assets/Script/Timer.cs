@@ -15,6 +15,9 @@ public class Timer : MonoBehaviour
     public float time = 0;
     public Image background;
 
+    public GameObject brightText;
+    private bool isBright = false;
+
     public void Start()
     {
         AudioManager.Instance.AudioPlay("InGame");
@@ -24,13 +27,13 @@ public class Timer : MonoBehaviour
     public void Resume()
     {
         AudioManager.Instance.AudioPlay("InGame");
-        StartCoroutine(StartTimer());
+        Time.timeScale = 1;
     }
 
     public void Pause()
     {
         AudioManager.Instance.AudioPlay("Menu");
-        StopAllCoroutines();
+        Time.timeScale = 0;
     }
 
     IEnumerator StartTimer()
@@ -38,12 +41,21 @@ public class Timer : MonoBehaviour
         while (time < 60)
         {
             time += Time.deltaTime;
+
+            if (time > 44f && !isBright) StartCoroutine(BrightText());
             yield return null;
         }
         StartCoroutine(Fail());
     }
 
+    IEnumerator BrightText()
+    {
+        isBright = true;
+        brightText.SetActive(true);
 
+        while (time < 46f) yield return null;
+        brightText.SetActive(false);
+    }
 
     IEnumerator Fail()
     {
